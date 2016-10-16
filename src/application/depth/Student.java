@@ -5,16 +5,13 @@ package application.depth;
  */
 
 public class Student {
-    String sname, theme, team;
+    private String sname, sclass;
+    private int sregistration;
 
-    public Student() {
-
-    }
-
-    public Student(String sname, String theme, String team) {
+    public Student(String sname, String sclass, int sregistration) {
         this.sname = sname;
-        this.theme = theme;
-        this.team = team;
+        this.sclass = sclass;
+        this.sregistration = sregistration;
     }
 
     public String getSname() {
@@ -25,19 +22,19 @@ public class Student {
         this.sname = sname;
     }
 
-    public String getTheme() {
-        return theme;
+    public String getSclass() {
+        return sclass;
     }
 
-    public void setTheme(String theme) {
-        this.theme = theme;
+    public void setSclass(String sclass) {
+        this.sclass = sclass;
     }
 
-    public String getTeam() {
-        return team;
+    public int getSregistration() {
+        return sregistration;
     }
 
-    public void setTeam(String team) {
-        this.team = team;
+    public void setSregistration(int sregistration) {
+        this.sregistration = sregistration;
     }
 }

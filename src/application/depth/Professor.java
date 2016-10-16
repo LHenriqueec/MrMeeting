@@ -1,41 +1,33 @@
 package application.depth;
+import java.util.ArrayList;
 
 /**
  * Created by Allex Lima & Paulo Moraes.
  */
 
 public class Professor {
-    private String pname, discipline;
-    private float thour;
 
-    public Professor(String pname, String discipline, float thour) {
-        this.pname = pname;
-        this.discipline = discipline;
-        this.thour = thour;
+    private String psname;
+    private ArrayList<Schedules> schedules;
+
+    public Professor(String psname, ArrayList<Schedules> schedules) {
+        this.psname = psname;
+        this.schedules = schedules;
     }
 
-    public String getPname() {
-        return pname;
+    public String getPsname() {
+        return psname;
     }
 
-    public void setPname(String pname) {
-        this.pname = pname;
+    public void setPsname(String psname) {
+        this.psname = psname;
     }
 
-    public String getDiscipline() {
-        return discipline;
+    public ArrayList<Schedules> getSchedules() {
+        return schedules;
     }
 
-    public void setDiscipline(String discipline) {
-        this.discipline = discipline;
+    public void setSchedules(ArrayList<Schedules> schedules) {
+        this.schedules = schedules;
     }
-
-    public float getThour() {
-        return thour;
-    }
-
-    public void setThour(float thour) {
-        this.thour = thour;
-    }
-
 }
