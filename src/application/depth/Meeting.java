@@ -7,12 +7,12 @@ package application.depth;
 public class Meeting {
 
     private Student student;
-    private String theme, details;
+    private String subject, details;
     private Professor professor;
 
-    public Meeting(Student student, String theme, String details, Professor professor) {
+    public Meeting(Student student, String subject, String details, Professor professor) {
         this.student = student;
-        this.theme = theme;
+        this.subject = subject;
         this.details = details;
         this.professor = professor;
     }
@@ -25,12 +25,12 @@ public class Meeting {
         this.student = student;
     }
 
-    public String getTheme() {
-        return theme;
+    public String getSubject() {
+        return subject;
     }
 
-    public void setTheme(String theme) {
-        this.theme = theme;
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 
     public String getDetails() {
