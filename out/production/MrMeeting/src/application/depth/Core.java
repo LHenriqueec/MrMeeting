@@ -23,7 +23,7 @@ public class Core {
             System.out.println("Professor: " + item.getPsname());
             for(int h = 0; h < item.getSchedules().size(); h++){
                 Schedules avaiableTime =  item.getSchedules().get(i);
-                System.out.println("#" + h + " A partir de " + avaiableTime.getStart() + " até " + avaiableTime.getEnd());
+                // System.out.println("#" + h + " A partir de " + avaiableTime.getTstart() + " até " + avaiableTime.getSfinal());
             }
             System.out.println("--- ");
         }

@@ -5,7 +5,4 @@ package application.depth;
  */
 
 public class Assistent {
-
-
-
 }
