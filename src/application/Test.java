@@ -1,11 +1,10 @@
-package application.depth;
+package application;
 
 /**
- * Created by Allex Lima & Paulo Moraes.
+ * Created by Allex Lima and Paulo Moraes
  */
 
-public class Main {
-
+public class Test {
     public static void main(String[] args) {
         Professor professor = new Professor();
 
@@ -22,5 +21,4 @@ public class Main {
         Assistent assistent = new Assistent();
         assistent.scheduling();
     }
-
 }

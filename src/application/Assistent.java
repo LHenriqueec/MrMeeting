@@ -1,4 +1,4 @@
-package application.depth;
+package application;
 import java.util.Scanner;
 
 /**
@@ -33,7 +33,7 @@ public class Assistent extends Core{
         System.out.println("\n");
         for(int i = 0; i < Core.professors.size(); i++) {
             Professor item = Core.professors.get(i);
-            System.out.println("#" + i + "Professor: " + item.getPsname());
+            System.out.println("#" + i + " Professor: " + item.getPsname());
         }
         System.out.println("\nEscolha um professor: ");
         return professors.get(Integer.parseInt(in.nextLine()));
