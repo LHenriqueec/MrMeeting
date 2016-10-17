@@ -28,12 +28,12 @@ public class Assistent extends Core{
         return student;
     }
 
-    public Professor professorChoose(){
+    public static Professor professorChoose(){
         Scanner in = new Scanner(System.in);
-        System.out.println("\n");
+        System.out.println("");
         for(int i = 0; i < Core.professors.size(); i++) {
             Professor item = Core.professors.get(i);
-            System.out.println("#" + i + " Professor: " + item.getPsname());
+            System.out.println("\t#" + i + " - Professor(a) " + item.getPsname());
         }
         System.out.println("\nEscolha um professor: ");
         return professors.get(Integer.parseInt(in.nextLine()));
@@ -42,13 +42,18 @@ public class Assistent extends Core{
     @Override
     public void printProfessorSchedules(){
         Scanner in = new Scanner(System.in);
-        this.professor = this.professorChoose();
-        System.out.println("\n");
-        for(int i = 0; i < professor.getSchedules().size(); i++){
-            System.out.println("#" + i + " de " + professor.getSchedules().get(i).getStart() + " até às " + professor.getSchedules().get(i).getEnd());
+        this.professor = Assistent.professorChoose();
+        System.out.println("");
+        if(professor.getSchedules().size() > 0){
+            for(int i = 0; i < professor.getSchedules().size(); i++){
+                System.out.println("\t#" + i + " de " + professor.getSchedules().get(i).getStart() + " até às " + professor.getSchedules().get(i).getEnd());
+            }
+            System.out.println("Escolha um horário: ");
+            this.meetingIndex = Integer.parseInt(in.nextLine());
+            System.out.println("");
+        }else{
+            System.out.println("Este professor não possui tempo disponível para atendimento!!");
         }
-        System.out.println("\nEscolha um horário: ");
-        this.meetingIndex = Integer.parseInt(in.nextLine());
     }
 
     public void scheduling(){
@@ -72,5 +77,7 @@ public class Assistent extends Core{
         meeting.setMeetingIndex(this.meetingIndex);
 
         Core.setMeetings(meeting);
+
+        System.out.println("Agendamento realizado com sucesso!");
     }
 }
