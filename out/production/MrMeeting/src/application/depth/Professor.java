@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Professor {
 
     private String psname;
-    private ArrayList<Schedules> schedules;
+    private ArrayList<Schedules> schedules = new ArrayList();
 
     public Professor(){
 
@@ -31,7 +31,7 @@ public class Professor {
         return schedules;
     }
 
-    public void setSchedules(ArrayList<Schedules> schedules) {
-        this.schedules = schedules;
+    public void setSchedules(Schedules schedules){
+        this.schedules.add(schedules);
     }
 }

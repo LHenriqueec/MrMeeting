@@ -1,10 +1,5 @@
 package application.depth;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 /**
  * Created by Allex Lima & Paulo Moraes.
  */
@@ -12,6 +7,20 @@ import java.util.Date;
 public class Main {
 
     public static void main(String[] args) {
+        Professor professor = new Professor();
 
+        professor.setPsname("Sancha");
+
+        Schedules schedules = new Schedules();
+        schedules.setSart(10, 20);
+        schedules.setEnd(11, 00);
+
+        professor.setSchedules(schedules);
+
+        Core.setProfessors(professor);
+
+        Assistent assistent = new Assistent();
+        assistent.scheduling();
     }
+
 }

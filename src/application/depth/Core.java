@@ -7,8 +7,8 @@ import java.util.ArrayList;
 
 class Core {
 
-    protected static ArrayList<Professor> professors;
-    protected static ArrayList<Meeting> meetings;
+    protected static ArrayList<Professor> professors = new ArrayList();
+    protected static ArrayList<Meeting> meetings = new ArrayList();
 
     public static void setProfessors(Professor professor){
         Core.professors.add(professor);

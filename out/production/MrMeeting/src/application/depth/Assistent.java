@@ -63,12 +63,14 @@ public class Assistent extends Core{
         System.out.println("Assunto: ");
         meeting.setSubject(in.nextLine());
 
-        System.out.println("Details: ");
+        System.out.println("Detalhes: ");
         meeting.setDetails(in.nextLine());
 
         this.printProfessorSchedules();
 
         meeting.setProfessor(this.professor);
         meeting.setMeetingIndex(this.meetingIndex);
+
+        Core.setMeetings(meeting);
     }
 }
