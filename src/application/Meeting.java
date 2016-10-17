@@ -1,4 +1,4 @@
-package application.depth;
+package application;
 
 /**
  * Created by Allex Lima & Paulo Moraes.
