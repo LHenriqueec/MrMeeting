@@ -10,6 +10,10 @@ public class Professor {
     private String psname;
     private ArrayList<Schedules> schedules;
 
+    public Professor(){
+
+    }
+
     public Professor(String psname, ArrayList<Schedules> schedules) {
         this.psname = psname;
         this.schedules = schedules;

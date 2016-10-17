@@ -9,12 +9,18 @@ public class Meeting {
     private Student student;
     private String subject, details;
     private Professor professor;
+    private int meetingIndex;
 
-    public Meeting(Student student, String subject, String details, Professor professor) {
+    public Meeting(){
+
+    }
+
+    public Meeting(Student student, String subject, String details, Professor professor, int meetingIndex) {
         this.student = student;
         this.subject = subject;
         this.details = details;
         this.professor = professor;
+        this.meetingIndex = meetingIndex;
     }
 
     public Student getStudent() {
@@ -47,5 +53,13 @@ public class Meeting {
 
     public void setProfessor(Professor professor) {
         this.professor = professor;
+    }
+
+    public int getMeetingIndex() {
+        return meetingIndex;
+    }
+
+    public void setMeetingIndex(int meetingIndex) {
+        this.meetingIndex = meetingIndex;
     }
 }

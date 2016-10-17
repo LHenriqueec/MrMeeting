@@ -8,6 +8,10 @@ public class Student {
     private String sname, sclass;
     private int sregistration;
 
+    public Student(){
+
+    }
+
     public Student(String sname, String sclass, int sregistration) {
         this.sname = sname;
         this.sclass = sclass;

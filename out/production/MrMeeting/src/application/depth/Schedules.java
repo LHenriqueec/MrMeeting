@@ -34,9 +34,14 @@ public class Schedules {
         }
     }
 
-    public void getStart(){
-
+    public String getStart(){
+        SimpleDateFormat ft = new SimpleDateFormat("H:m");
+        return ft.format(this.start);
     }
 
+    public String getEnd(){
+        SimpleDateFormat ft = new SimpleDateFormat("H:m");
+        return ft.format(this.end);
+    }
 }
 
